@@ -1,11 +1,11 @@
 ﻿@page
-@model CIUREA_COSMIN_LAB2.Pages.Publishers.IndexModel
+@model CIUREA_COSMIN_LAB2.Pages.Authors.IndexModel
 
 @{
-    ViewData["Title"] = "Publishers";
+    ViewData["Title"] = "Authors";
 }
 
-<h1>Publishers</h1>
+<h1>Autori</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -14,16 +14,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Publisher[0].PublisherName)
+                @Html.DisplayNameFor(model => model.Author[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author[0].LastName)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Publisher) {
+@foreach (var item in Model.Author) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.PublisherName)
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

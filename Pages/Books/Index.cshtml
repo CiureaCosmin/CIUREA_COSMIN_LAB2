@@ -2,10 +2,10 @@
 @model CIUREA_COSMIN_LAB2.Pages.Books.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Books";
 }
 
-<h1>Index</h1>
+<h1>Lista Carti</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -17,7 +17,10 @@
                 @Html.DisplayNameFor(model => model.Book[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Author)
+                @Html.DisplayNameFor(model => model.Book[0].Author.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Author.LastName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Price)
@@ -28,6 +31,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.Book[0].Publisher.PublisherName)
             </th>
+           
+
             <th></th>
         </tr>
     </thead>
@@ -37,9 +42,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.LastName)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
@@ -49,6 +57,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
                 </td>
+                
+
 
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

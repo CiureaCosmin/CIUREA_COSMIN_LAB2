@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using CIUREA_COSMIN_LAB2.Data;
 using CIUREA_COSMIN_LAB2.Models;
 
-namespace CIUREA_COSMIN_LAB2.Pages.Books
+namespace CIUREA_COSMIN_LAB2.Pages.Authors
 {
     public class CreateModel : PageModel
     {
@@ -21,17 +21,11 @@ namespace CIUREA_COSMIN_LAB2.Pages.Books
 
         public IActionResult OnGet()
         {
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
-"PublisherName");
-            ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID",
-"FirstName");
-            ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID",
-"LastName");
             return Page();
         }
-         
+
         [BindProperty]
-        public Book Book { get; set; }
+        public Author Author { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -42,7 +36,7 @@ namespace CIUREA_COSMIN_LAB2.Pages.Books
                 return Page();
             }
 
-            _context.Book.Add(Book);
+            _context.Author.Add(Author);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

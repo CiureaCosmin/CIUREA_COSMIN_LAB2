@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CIUREA_COSMIN_LAB2.Data;
 using CIUREA_COSMIN_LAB2.Models;
 
-namespace CIUREA_COSMIN_LAB2.Pages.Books
+namespace CIUREA_COSMIN_LAB2.Pages.Authors
 {
     public class IndexModel : PageModel
     {
@@ -19,14 +19,13 @@ namespace CIUREA_COSMIN_LAB2.Pages.Books
             _context = context;
         }
 
-        public IList<Book> Book { get;set; } = default!;
+        public IList<Author> Author { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.Book != null)
+            if (_context.Author != null)
             {
-                Book = await _context.Book.Include(b => b.Publisher).Include(b => b.Author)
-.ToListAsync();
+                Author = await _context.Author.ToListAsync();
             }
         }
     }
