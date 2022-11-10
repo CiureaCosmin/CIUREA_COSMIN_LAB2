@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CIUREA_COSMIN_LAB2.Data;
 using CIUREA_COSMIN_LAB2.Models;
 
-namespace CIUREA_COSMIN_LAB2.Pages.Authors
+namespace CIUREA_COSMIN_LAB2.Pages.Categories
 {
     public class DetailsModel : PageModel
     {
@@ -19,23 +19,23 @@ namespace CIUREA_COSMIN_LAB2.Pages.Authors
             _context = context;
         }
 
-      public Author Author { get; set; }
+      public Category Category { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Authors == null)
+            if (id == null || _context.Category == null)
             {
                 return NotFound();
             }
 
-            var author = await _context.Authors.FirstOrDefaultAsync(m => m.ID == id);
-            if (author == null)
+            var category = await _context.Category.FirstOrDefaultAsync(m => m.ID == id);
+            if (category == null)
             {
                 return NotFound();
             }
             else 
             {
-                Author = author;
+                Category = category;
             }
             return Page();
         }

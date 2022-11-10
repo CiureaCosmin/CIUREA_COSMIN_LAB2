@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using CIUREA_COSMIN_LAB2.Data;
 using CIUREA_COSMIN_LAB2.Models;
 
-namespace CIUREA_COSMIN_LAB2.Pages.Authors
+namespace CIUREA_COSMIN_LAB2.Pages.Categories
 {
     public class CreateModel : PageModel
     {
@@ -21,12 +21,11 @@ namespace CIUREA_COSMIN_LAB2.Pages.Authors
 
         public IActionResult OnGet()
         {
-
             return Page();
         }
 
         [BindProperty]
-        public Author Author { get; set; }
+        public Category Category { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -37,7 +36,7 @@ namespace CIUREA_COSMIN_LAB2.Pages.Authors
                 return Page();
             }
 
-            _context.Authors.Add(Author);
+            _context.Category.Add(Category);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

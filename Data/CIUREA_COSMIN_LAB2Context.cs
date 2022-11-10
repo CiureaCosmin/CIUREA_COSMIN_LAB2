@@ -18,6 +18,8 @@ namespace CIUREA_COSMIN_LAB2.Data
 
         public DbSet<CIUREA_COSMIN_LAB2.Models.Publisher> Publisher { get; set; }
 
-        public DbSet<CIUREA_COSMIN_LAB2.Models.Author> Author { get; set; }
+        public DbSet<CIUREA_COSMIN_LAB2.Models.Author> Authors { get; set; }
+
+        public DbSet<CIUREA_COSMIN_LAB2.Models.Category> Category { get; set; }
     }
 }

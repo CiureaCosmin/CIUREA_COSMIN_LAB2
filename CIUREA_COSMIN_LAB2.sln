@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIUREA_COSMIN_LAB2", "CIUREA_COSMIN_LAB2.csproj", "{F924910F-0452-4E44-AAAA-0D2944383FB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CIUREA_COSMIN_LAB2", "CIUREA_COSMIN_LAB2.csproj", "{7B6986C9-9059-4AE5-B0CD-C6FFC8AA63EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F924910F-0452-4E44-AAAA-0D2944383FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F924910F-0452-4E44-AAAA-0D2944383FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F924910F-0452-4E44-AAAA-0D2944383FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F924910F-0452-4E44-AAAA-0D2944383FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B6986C9-9059-4AE5-B0CD-C6FFC8AA63EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6986C9-9059-4AE5-B0CD-C6FFC8AA63EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6986C9-9059-4AE5-B0CD-C6FFC8AA63EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6986C9-9059-4AE5-B0CD-C6FFC8AA63EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9020DF32-56EA-4039-A8FB-D7D5783ECF2F}
+		SolutionGuid = {71EE0384-4791-405B-8986-D33C7F46421C}
 	EndGlobalSection
 EndGlobal
